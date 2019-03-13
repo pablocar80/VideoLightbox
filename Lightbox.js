@@ -20,6 +20,7 @@ class Lightbox {
     
     var anchor = document.createElement("a");
     anchor.id = lightbox_boxclose;
+    anchor.className = "boxclose";
     anchor.addEventListener("click", lightbox_close);
     light.appendChild(anchor);
     this.anchor = anchor;
