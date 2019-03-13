@@ -3,7 +3,7 @@ Simple JavaScript lightbox to watch videos
 
 Library developed for Integrative Studio's website
 
-https://integrative.io
+<a href="https://integrative.io">integrative.io</a>
 
 Usage:
 
