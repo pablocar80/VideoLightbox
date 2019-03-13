@@ -54,7 +54,7 @@ class Lightbox {
   
   openVideo(url, width) {
     this.source.src = url;
-    this.video.width = width;
+    this.video.width = Math.min(width, document.documentElement.clientWidth);
     window.scrollTo(0, 0);
     this.light.style.display = 'block';
     this.fade.style.display = 'block';
