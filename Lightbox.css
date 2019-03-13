@@ -19,8 +19,8 @@
 #_lb_light {
   display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
   border: 2px solid #FFF;
   background: #FFF;
