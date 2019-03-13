@@ -1,6 +1,7 @@
 // File: lightbox.js
 // 03/2019 Integrative Software LLC 
 // MIT license
+// https://github.com/pablocar80/VideoLightbox
 
 // Note: requires CSS for styling lightbox objects
 
