@@ -53,11 +53,17 @@ class Lightbox {
     })
   }
   
-  openVideo(url, width) {
+  openVideo(url, widthMin, widthMax) {
     var hasPrevious = (this.video.currentTime > 0)
       && (this.source.src !== url);
     this.source.src = url;
-    this.video.width = Math.min(width, document.documentElement.clientWidth);
+    var width = document.documentElement.clientWidth;
+    if (width < widthMin) {
+      width = widthMin;
+    } else if (width > widthMax) {
+      width = widthMax;
+    }
+    this.video.width = width;
     window.scrollTo(0, 0);
     this.light.style.display = 'block';
     this.fade.style.display = 'block';
@@ -77,11 +83,11 @@ class Lightbox {
 
 var lightbox = null;
 
-function lightbox_open(url, width) {
+function lightbox_open(url, widthMin, widthMax) {
   if (lightbox == null) {
     lightbox = new Lightbox();
   }
-  lightbox.openVideo(url, width);
+  lightbox.openVideo(url, widthMin, widthMax);
 }
 
 function lightbox_close() {
