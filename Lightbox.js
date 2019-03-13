@@ -2,7 +2,7 @@
 // 03/2019 Integrative Software LLC 
 // MIT license
 
-// Note: requires CSS for styling lighbox objects
+// Note: requires CSS for styling lightbox objects
 
 const lightbox_fade = "_lb_fade";
 const lightbox_light = "_lb_light";
