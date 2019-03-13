@@ -54,11 +54,17 @@ class Lightbox {
   }
   
   openVideo(url, width) {
+    var hasPrevious = (this.video.currentTime > 0)
+      && (this.source.src !== url);
     this.source.src = url;
     this.video.width = Math.min(width, document.documentElement.clientWidth);
     window.scrollTo(0, 0);
     this.light.style.display = 'block';
     this.fade.style.display = 'block';
+    if (hasPrevious) {
+      this.video.pause();
+      this.video.load();
+    }
     this.video.play();
   }
   
