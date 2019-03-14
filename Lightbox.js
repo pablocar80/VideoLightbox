@@ -36,6 +36,7 @@ class Lightbox {
     var source = document.createElement("source");
     source.type = "video/mp4";
     video.appendChild(source);
+    video.addEventListener("ended", lightbox_close);
     this.source = source;
     
     var fade = document.createElement("div");
